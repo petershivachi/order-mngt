@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #4eb3f2;
+  --secondary-color: #1e88c9;
+  --success-color: #36a351;
+  --dark-color: #424543;
+  --light-color: #ebedec;
+  --secondary-color: #ebedec
+}
+
+/* Reset */
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar{
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  height: 70px;
+}
+
+.navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li{
+  padding: 0rem 1rem;
+}
+.nav-links li a{
+  color: #fff;
+}
+
+#header .flex .categories {
+  width: 30%;
+  background-color: #fff;
+  margin-right: 1rem;
+}
+#header .categories .list-group{
+  list-style: none;
+  text-align: center;
+}
+
+#header .categories .list-group .list-group-item {
+  border-bottom: #ddd 1px solid;
+  padding: 0.5rem 0;
+}
+
+#header .categories .list-group .list-group-item a {
+  color: #333;
+}
+
+#header .header-text {
+  width: 40%;
+}
+
+#header .header-img{
+  width: 27%;
+  background:#fff url('../img/header.jpg')no-repeat center center/cover;
+}
+
+
+#categories .flex {
+  padding: 1rem 1rem;
+  justify-content: space-between;
+}
+
+#categories .flex .men,
+#categories .flex .bags,
+#categories .flex .ladies {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+#categories .flex .men .men-text,
+#categories .flex .ladies .ladies-text,
+#categories .flex .bags .bags-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+
+#categories .flex .men img,
+#categories .flex .bags img,
+#categories .flex .ladies img{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+/*footer*/
+.footer .social a{
+  margin: 0 10px;
+}
+
+#trending .flex ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
