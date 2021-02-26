@@ -84,8 +84,8 @@ img{
   width: 40%;
 }
 
-#header .header-img{
-  width: 27%;
+#header .flex .header-img{
+  width: 30%;
   background:#fff url('../img/header.jpg')no-repeat center center/cover;
 }
 
