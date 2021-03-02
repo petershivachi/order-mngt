@@ -1,4 +1,5 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState} from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -50,7 +51,7 @@ const Register = () => {
               <input type="submit" value="Sign Up" id="register-btn" className="btn btn-primary"/>
       </form>
      <div className="my-1">
-      <small>Already have an account? <a href="login.html">Sign In</a></small>
+      <small>Already have an account? <Link to="/login">Sign In</Link></small>
      </div>
   </div>
   </div>
