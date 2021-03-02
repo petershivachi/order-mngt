@@ -207,12 +207,22 @@ img{
   font-size: 14px;
 }
 
-.register-form input:focus, 
-.login-form input:focus {
+.register-form input:focus[type='email'],
+.register-form input:focus[type='password'],
+.register-form input:focus[type='text'], 
+.login-form input:focus[type='email'],
+.login-form input:focus[type='text'] {
   outline: none;
+  border-color: #777;
 }
 
+.form-control.success input {
+	border-color: #2ecc71;
+}
 
+.form-control.error input {
+	border-color: #e74c3c;
+}
 
 .form-control small {
 	color: #e74c3c;
