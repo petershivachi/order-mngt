@@ -9,8 +9,13 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import './App.css';
 
+//Redux
+import { Provider } from 'react-redux';
+import store from './Store';
+
 const App = () => (
-  <Fragment>
+  <Provider store={store}>
+    <Fragment>
      <Router>
      <Navbar/>
      <Route exact path = "/" component={Landing}/>
@@ -23,6 +28,7 @@ const App = () => (
      <Footer/>
      </Router>
   </Fragment>
+  </Provider>
 )
 
 export default App;
