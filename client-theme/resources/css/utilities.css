@@ -198,5 +198,17 @@
   padding: 4rem;
 }
 
+/* Alerts */
+.alert {
+  padding: 0.7rem;
+  opacity: 0.8rem;
+  margin: 1rem;
+  background: #dc3445;
+  color: #333;
+}
 
+.alert-danger {
+  background-color: #a11624;
+  color: #fff;
+}
 
