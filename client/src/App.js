@@ -10,7 +10,7 @@ import Login from './components/auth/Login';
 import './App.css';
 
 const App = () => (
-  <Fragment className="App">
+  <Fragment>
      <Router>
      <Navbar/>
      <Route exact path = "/" component={Landing}/>
@@ -19,7 +19,7 @@ const App = () => (
          <Route exact path="/register" component={Register}/>
          <Route exact path="/login" component={Login}/>
        </Switch>
-     </section>
+     </section> 
      <Footer/>
      </Router>
   </Fragment>
