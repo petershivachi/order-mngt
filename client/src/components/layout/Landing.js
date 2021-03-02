@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
@@ -6,12 +7,12 @@ const Landing = () => {
       <h1 className="lg text-center">rending Item</h1>
       <div className="container flex py-1">
       <ul className="flex">
-          <li><a className="btn" href="./index.html">Home</a></li>
-          <li><a className="btn" href="./shoes.html">Shoes</a></li>
-          <li><a className="btn" href="./ladies.html">Ladies</a></li>
-          <li><a className="btn" href="./men.html">Men</a></li>
-          <li><a className="btn" href="./accessories.html">Accessories</a></li>
-          <li><a className="btn" href="./kids.html">Kids</a></li>
+          <li><Link to="/" className="btn">Home</Link></li>
+          <li><Link to="/shoes" className="btn">Shoes</Link></li>
+          <li><Link to="/ladies" className="btn">Ladies</Link></li>
+          <li><Link to="/men" className="btn">Men</Link></li>
+          <li><Link to="/accessories" className="btn">Accessories</Link></li>
+          <li><Link to="/kids" className="btn">Kids</Link></li>
         </ul>
       </div>
       <div className="trending py-1">
