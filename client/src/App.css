@@ -367,19 +367,18 @@ img{
 /* Register */
 .register,
 .login-form {
-  height: 700px;
+  height: 600px;
 }
-.register .grid .register-form {
-  position: relative;
-  max-width: 500px;
+.register  .register-form {
+  width: 100%;
   padding: 15px;
   z-index: 100;
-  margin: auto 200px;
+  padding-bottom: 2rem;
 }
 
 .register-form .form-control,
 .login-form .form-control{
-    margin: 15px 0px;
+    margin: 2.5rem 0rem;
 }
 
 .register-form  input[type='text'],
@@ -399,37 +398,10 @@ img{
 .register-form input:focus[type='password'],
 .register-form input:focus[type='text'], 
 .login-form input:focus[type='email'],
-.login-form input:focus[type='text'] {
+.login-form input:focus[type='password'] {
   outline: none;
   border-color: #777;
 }
-
-.form-control.success input {
-	border-color: #2ecc71;
-}
-
-.form-control.error input {
-	border-color: #e74c3c;
-}
-
-.form-control small {
-	color: #e74c3c;
-	position: relative;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-}
-
-.form-control.error small {
-	visibility: visible;
-}
-
-
-
-.register .register-form small a{
-    color: var(--primary-color);
-}
-
 
 /*footer*/
 .footer .social a{
@@ -439,4 +411,131 @@ img{
 #trending .flex ul {
   display: flex;
   justify-content: space-between;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 768px){
+  .grid,
+  .trending .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+  } 
+
+  .navbar .flex  {
+      flex-direction: column;
+  }
+
+  .showcase{
+      height: auto;
+  }
+
+  .showcase-text{
+      text-align: center;
+      margin-top: 40px;
+  }
+  
+  .showcase-form{
+      justify-self: center;
+      margin: auto;
+  }
+
+  .packages .flex {
+      display: block;
+  }
+
+  .footer .grid-3 {
+      grid-template-columns: 2fr;
+  }
+
+  /* users-table */
+  .users .grid {
+      margin: 5px auto;
+      padding: 5px 0px; 
+      overflow: auto;
+  }
+
+  .hide-sm {
+      display: none;
+    }
+
+    .table th,
+    .table td {
+      padding: 10px 5px;
+      text-align: center;
+      overflow: auto;
+  }
+
+  .users .grid .table tbody td .btn {
+      padding: 8px 15px;   
+  }
+
+  
+  
+  /* Register form */
+  .register .grid {
+      padding: 0px;
+  }
+  .register .grid .card {
+      display: none;
+  }
+
+  .register .grid .register-form {
+      padding: 5px 0px;
+      margin: auto;
+  }
+
+  /* Login */
+  .login,
+  .register-form{
+      display: grid;
+      align-items: center;
+      margin: auto;
+      overflow: visible;
+  }
+
+  .login .flex .card .login-form{
+      display: block;
+  }
+
+  /* create user */
+  .create-user .container .user-form {
+      align-items: center;
+  }
+
+  .container {
+      margin-top: 8rem;
+    }
+
+  .stats .flex {
+        display: block;
+        margin: 20px auto;
+    }
+
+  .stats .flex .card {
+        padding: 10px;
+        margin: 20px auto;
+  }
+  
+  /* care */
+  .container .care {
+      padding: 0px;
+  }
+
+  /* care-auth */
+  .care-auth {
+      padding: 0px;
+  }
+
+  /* contact us */
+  #contact-info .grid-3 {
+      grid-template-columns: 1fr;
+  }
+
+  #contact-info  .box {
+      float: none;
+      width: 100%;
+      border-bottom: #444 dotted 1px;
+  }
+
+
 }

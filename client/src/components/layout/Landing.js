@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Landing = () => {
   return (
     <section>
-      <h1 className="lg text-center">rending Item</h1>
+      <h1 className="lg text-center">Trending Items</h1>
       <div className="container flex py-1">
       <ul className="flex">
           <li><Link to="/" className="btn">Home</Link></li>
