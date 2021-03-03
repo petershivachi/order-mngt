@@ -1,7 +1,12 @@
 import React, { Fragment, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../actions/auth';
 
-const Login = () => {
+
+
+const Login = ( {login, isAuthenticated } ) => {
 
   const [formData, setFormData] = useState({
     email: '',
@@ -15,8 +20,14 @@ const Login = () => {
   const onSubmit = e => {
     e.preventDefault();
 
-    console.log('SUCCESS!!!');
+    login(email, password);
   }
+
+  //Redirect if logged In
+  if(isAuthenticated) {
+    return <Redirect to="/dashboard"/>
+  }
+
 
   return (
  <Fragment>
@@ -29,12 +40,12 @@ const Login = () => {
                 <input type="email" name="email" value={email}onChange={e=>onChange(e)} id="email" placeholder="Email" required/>
             </div>
             <div className="form-control">
-                <input type="password" name="password1" value={password} onChange={e=>onChange(e)} id="password1" placeholder="Password"/>
+                <input type="password" name="password" value={password} onChange={e=>onChange(e)} id="password" placeholder="Password"/>
             </div>
             <input type="submit" value="Sign Up" id="register-btn" className="btn btn-primary"/>
         </form>
        <div className="my-1">
-        <small>Already have an account? <Link to="/register" className="text-primary">Sign Up</Link></small>
+        <small>Already have an account? <Link to="/register" className="text-primary">Sign In</Link></small>
        </div>
     </div>
     </div>
@@ -43,4 +54,14 @@ const Login = () => {
   )
 }
 
-export default Login
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
+}
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps, { login }) (Login);
