@@ -42,10 +42,10 @@ const Login = ( {login, isAuthenticated } ) => {
             <div className="form-control">
                 <input type="password" name="password" value={password} onChange={e=>onChange(e)} id="password" placeholder="Password"/>
             </div>
-            <input type="submit" value="Sign Up" id="register-btn" className="btn btn-primary"/>
+            <input type="submit" value="Sign In" id="register-btn" className="btn btn-primary"/>
         </form>
        <div className="my-1">
-        <small>Already have an account? <Link to="/register" className="text-primary">Sign In</Link></small>
+        <small>Already have an account? <Link to="/register" className="text-primary">Sign Up</Link></small>
        </div>
     </div>
     </div>

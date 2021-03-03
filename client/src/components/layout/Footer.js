@@ -9,15 +9,23 @@ const Footer = () => {
           E-Store
       </h1>
       <p>CopyRight&copy; 2021</p>
-      <div>
-          <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/shoes">Shoes</Link></li>
-              <li><Link to="/ladies">Ladies</Link></li>
-              <li><Link to="/men">Men</Link></li>
-              <li><Link to="/accessories">Accessories</Link></li>
-              <li><Link to="/kids">Kids</Link></li>
-          </ul>
+      <div class="contact">
+        <h2>Contact Info</h2>
+        <div>
+          <h3>Corporate Office Address: </h3>
+          <p>
+            1234 Ngong Avenue
+          </p>
+          <p>
+            Nairobi, Kenya
+          </p>
+          <p>1000</p>
+        </div>
+        <div>
+          <h3>Customer Service: </h3>
+          <p><i class="fas fa-phone"></i>{'  '} +254-720212021</p>
+          <p><i class="fas fa-envelope"></i>{'  '} E-Store.co.ke</p>
+        </div>
       </div>
       <div className="social">
           <Link to="#"><i className="fab fa-twitter fa-2x"></i></Link>
